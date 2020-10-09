@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HJPhoto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <script type="text/javascript" src="../node_modules/androidjs/lib/androidjs.js"></script>
+    <script type="text/javascript" src="../assets/script.js"></script>
+    <script type="text/javascript" src="../assets/custom-elem.js"></script>
+    <link rel="stylesheet" href="../assets/main.css">
+  </head>
+  <body>
+    <main>
+      <m-p s="100%::100%" sw='{ "l": "#s-l", "r": "#s-r", "d": "#s-d", "u": "#s-t" }'>
+        <canvas main width=1024 height=1024></canvas>
+      </m-p>
+    </main>
+    <m-fade></m-fade>
+    <on-top>
+      <m-p c top s="100%::100px" bg="--c-gradient" fg="--c-text-invert" side="top" id="s-t" offset=30 onclick="this.slide(true)">
+        <m-p s="100%::70px" bg="--c-dark"></m-p>
+        <m-p s="100%::30px">
+          <m-t h b s="30px / 2" id="file-name">Unnamed project.hjp</m-t>
+        </m-p>
+      </m-p>
+
+      <m-p c top s="200px::100%" bg="--c-main" side="left" id="s-l">
+        <m-p s="100%::50px" bg="--c-main">
+          <m-t>File</m-t>
+        </m-p>
+        <m-p c s="100%::100% - 50px">
+          <c-r>
+            <button big>New</button>
+            <button big>Save</button>
+            <button big>Open</button>
+          </c-r>
+          <c-r centered>
+            <m-t>I am centered! Hot af 😎</m-t>
+          </c-r>
+        </m-p>
+      </m-p>
+
+      <m-p c top s="250px::100%" bg="--c-second" side="right" id="s-r">
+        <m-p s="100%::50px" bg="--c-main">
+          <m-t>Layers</m-t>
+        </m-p>
+        <m-p s="100%::100% - 50px">
+          <m-t>one</m-t>
+        </m-p>
+      </m-p>
+
+      <m-p c top s="100%::300px" bg="--c-dark" side="down" id="s-d" offset=50 onclick="this.slide(true)">
+        <m-t>Tools</m-t>
+      </m-p>
+    </on-top>
+  </body>
+</html>
